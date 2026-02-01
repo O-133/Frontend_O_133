@@ -1,0 +1,8 @@
+{
+  "/(main)/favorites/page": "app/(main)/favorites/page.js",
+  "/(main)/fridge/page": "app/(main)/fridge/page.js",
+  "/(main)/mypage/page": "app/(main)/mypage/page.js",
+  "/(main)/home/page": "app/(main)/home/page.js",
+  "/onboarding/profile/page": "app/onboarding/profile/page.js",
+  "/onboarding/ingredients/page": "app/onboarding/ingredients/page.js"
+}

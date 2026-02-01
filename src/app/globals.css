@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --max-width: 430px;
+  --bottom-nav-height: 76px;
+  --header-height: 56px;
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Pretendard Variable', 'Pretendard', 'Noto Sans KR', sans-serif;
+  color: #0F172A;
+  background-color: #F1F5F9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer components {
+  .mobile-frame {
+    @apply relative mx-auto w-full bg-white;
+    max-width: var(--max-width);
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  .page-container {
+    @apply px-5;
+    padding-top: calc(var(--header-height) + 12px);
+    padding-bottom: calc(var(--bottom-nav-height) + 16px);
+  }
+
+  .onboarding-container {
+    @apply px-6 flex flex-col;
+    min-height: 100dvh;
+  }
+}
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
