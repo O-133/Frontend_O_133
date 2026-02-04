@@ -140,7 +140,7 @@ export default function OnboardingProfilePage() {
                 <button onClick={() => setHasMeds(true)} className={clsx("flex-1 py-4 rounded-xl border-2 font-medium", hasMeds === true ? "border-primary-500 bg-primary-50 text-primary-700" : "border-gray-200")}>네, 먹고 있어요</button>
                 <button onClick={() => { setHasMeds(false); setMedicationName(''); }} className={clsx("flex-1 py-4 rounded-xl border-2 font-medium", hasMeds === false ? "border-primary-500 bg-primary-50 text-primary-700" : "border-gray-200")}>아니요</button>
               </div>
-              {hasMeds && <div className="animate-slide-up"><Input label="약 이름" placeholder="예: 메트포르민" value={medicationName} onChange={(e) => setMedicationName(e.target.value)} /></div>}
+              {hasMeds && <div className="animate-slide-up"><Input label="약 이름" placeholder="예: 인데놀 / 메트포르민" value={medicationName} onChange={(e) => setMedicationName(e.target.value)} /></div>}
             </div>
           </div>
         )}
